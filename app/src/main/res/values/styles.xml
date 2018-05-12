@@ -7,9 +7,9 @@
         <item name="android:windowTranslucentNavigation">true</item>
 
         <!-- 设置通知栏颜色 -->
-        <item name="android:statusBarColor">#FF31c270</item>
-        <item name="android:colorPrimary">#FF31c270</item>
-        <item name="android:colorPrimaryDark">#FF31c270</item>
+        <item name="android:statusBarColor">#33b5e5</item>
+        <item name="android:colorPrimary">#33b5e5</item>
+        <item name="android:colorPrimaryDark">#33b5e5</item>
         <item name="android:listPreferredItemHeight">50dp</item>
 
     </style>

@@ -67,11 +67,11 @@ public class MainActivity extends  AppCompatActivity{
                         break;
                     case 1:  {
                         Log.d("qqqq","111b");
-                        replaceFragment(new SkillActivity());
+                        replaceFragment(new StoreActivity());
                         Log.d("qqqq","111b");
                     }
                         break;
-                    case 2: replaceFragment(new UserHomeActivity());
+                    case 2: replaceFragment(new TrendActivity());
                         break;
                     case 3: replaceFragment(new UserHomeActivity());
                         break;

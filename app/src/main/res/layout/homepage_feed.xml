@@ -29,8 +29,10 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:background="#FFF"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="-7dp"
             android:layout_marginBottom="4dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_height="wrap_content">
 
             <EditText
@@ -38,9 +40,9 @@
                 android:layout_width="0dp"
                 android:textSize="16sp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="0dp"
                 android:layout_marginEnd="5dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="-7dp"
                 android:hint="音源搜索"
                 app:backgroundTint="@color/colorMain"
                 app:rippleColor="#33728dff"
@@ -61,7 +63,7 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/wish_view"
+                android:id="@+id/homepage_recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@color/colorPrimary"
+        android:src="@color/colorMain"
         android:layout_marginTop="?attr/actionBarSize"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_face_black_24dp" />
+                android:background="@drawable/ic_store_face" />
 
             <TextView
                 android:layout_width="0dp"
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_favorite_black_24dp" />
+                android:background="@drawable/ic_store_store" />
 
             <TextView
                 android:layout_width="0dp"
@@ -123,7 +123,7 @@
                 android:textSize="17sp"
                 android:layout_marginStart="10dp"
                 android:gravity="center_vertical"
-                android:text="我的心愿" />
+                android:text="我的音源库" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_lightbulb_outline_black_24dp" />
+                android:background="@drawable/ic_store_lightbulb" />
 
             <TextView
                 android:layout_width="0dp"
@@ -154,7 +154,7 @@
                 android:gravity="center_vertical"
                 android:textSize="17sp"
                 android:layout_marginStart="10dp"
-                android:text="我的技能" />
+                android:text="我的作品" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -176,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_account_box_black_24dp" />
+                android:background="@drawable/ic_store_info" />
 
             <TextView
                 android:layout_width="0dp"
@@ -208,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/ic_settings_black_24dp" />
+                android:background="@drawable/ic_store_settings" />
 
             <TextView
                 android:layout_width="0dp"

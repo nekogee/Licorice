@@ -29,7 +29,7 @@ public class HomePageActivity extends Fragment {
         FloatingActionButton PresentLoc = (FloatingActionButton) view.findViewById(R.id.wishFab);
         PresentLoc.setOnClickListener(new LocationCheckedListener());
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.wish_view);
+        recyclerView = (RecyclerView) view.findViewById(R.id.homepage_recyclerView);
 
         return view;
     }
