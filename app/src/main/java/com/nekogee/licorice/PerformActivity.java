@@ -140,8 +140,8 @@ public class PerformActivity extends AppCompatActivity {
         exoPlayer24 = newPlayer();
 
         //Piano low
-        ButtonInfo buttonInfo6 = new ButtonInfo(R.id.ImageView_6,exoPlayer6,R.raw.piano_b3,R.raw.rejection,SINGLE,SHORT);
-        ButtonInfo buttonInfo12 = new ButtonInfo(R.id.ImageView_12,exoPlayer12,R.raw.piano_d4,R.raw.dyslexia,SINGLE,SHORT);
+        ButtonInfo buttonInfo6 = new ButtonInfo(R.id.ImageView_6,exoPlayer6,R.raw.piano_b3,R.raw.piano_high_j,SINGLE,SHORT);
+        ButtonInfo buttonInfo12 = new ButtonInfo(R.id.ImageView_12,exoPlayer12,R.raw.piano_d4,R.raw.piano_low,SINGLE,SHORT);
         ButtonInfo buttonInfo18 = new ButtonInfo(R.id.ImageView_18,exoPlayer18,R.raw.piano_g3,R.raw.estimate,SINGLE,SHORT);
         ButtonInfo buttonInfo24 = new ButtonInfo(R.id.ImageView_24,exoPlayer24,R.raw.piano_e4,R.raw.articulation,SINGLE,SHORT);
         ButtonInfo buttonInfo5 = new ButtonInfo(R.id.ImageView_5,exoPlayer5,R.raw.piano_g4,R.raw.mnemonics,SINGLE,SHORT);
@@ -162,7 +162,7 @@ public class PerformActivity extends AppCompatActivity {
 
         //Piano high
         ButtonInfo buttonInfo4 = new ButtonInfo(R.id.ImageView_4,exoPlayer4,R.raw.piano_b_high,R.raw.estimate,SINGLE,LONG);
-        ButtonInfo buttonInfo10 = new ButtonInfo(R.id.ImageView_10,exoPlayer10,R.raw.piano_high,R.raw.estimate,SINGLE,LONG);
+        ButtonInfo buttonInfo10 = new ButtonInfo(R.id.ImageView_10,exoPlayer10,R.raw.piano_high_j,R.raw.estimate,SINGLE,LONG);
 
         initPlayButton(buttonInfo4);
         initPlayButton(buttonInfo10);

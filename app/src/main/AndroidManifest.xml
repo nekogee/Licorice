@@ -15,7 +15,7 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-        <activity android:name=".WishEditActivity"/>
         <activity android:name=".SkillEditActivity"/>
+        <activity android:name=".PerformActivity"/>
     </application>
 </manifest>

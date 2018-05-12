@@ -1,5 +1,9 @@
 package com.nekogee.licorice;
 
+import android.widget.ImageView;
+
+import com.google.android.exoplayer2.SimpleExoPlayer;
+
 /**
  * Created by Administrator on 2018/4/11 0011.
  */
@@ -12,6 +16,8 @@ public class HomepageFeed {
     private String songAuthor ;
     private int musicID;
     private boolean isPlaying = false;
+    private SimpleExoPlayer exoPlayer;
+    private int image_preview;
 
     public HomepageFeed(int userImage, String userName, int cover, String songTitle , String songAuthor, int musicID){
         this.userImage = userImage ;
@@ -20,6 +26,30 @@ public class HomepageFeed {
         this.songTitle = songTitle ;
         this.songAuthor = songAuthor;
         this.musicID = musicID ;
+    }
+
+    public int getImage_preview() {
+        return image_preview;
+    }
+
+    public void setImage_preview(int image_preview) {
+        this.image_preview = image_preview;
+    }
+
+    public SimpleExoPlayer getExoPlayer() {
+        return exoPlayer;
+    }
+
+    public void setExoPlayer(SimpleExoPlayer exoPlayer) {
+        this.exoPlayer = exoPlayer;
+    }
+
+    public boolean getPlaying() {
+        return isPlaying;
+    }
+
+    public void setPlaying(boolean isPlaying) {
+        this.isPlaying = isPlaying;
     }
 
     public int getUserImage() {

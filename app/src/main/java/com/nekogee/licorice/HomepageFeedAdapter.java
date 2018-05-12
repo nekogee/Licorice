@@ -73,32 +73,41 @@ public class HomepageFeedAdapter extends RecyclerView.Adapter<HomepageFeedAdapte
         holder.imagePreview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //if(holder.isPlaying) 
-                SimpleExoPlayer exoPlayer;
-                DefaultBandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
-                TrackSelection.Factory selectionFactory = new AdaptiveTrackSelection.Factory(bandwidthMeter);
-                TrackSelector trackSelector = new DefaultTrackSelector(selectionFactory);
-                exoPlayer = ExoPlayerFactory.newSimpleInstance(view.getContext(), trackSelector);
-
-                try {
-                    DataSpec dataSpec = new DataSpec(RawResourceDataSource.buildRawResourceUri(homepageFeed.getMusicID()));
-                    rawResourceDataSource = new RawResourceDataSource(view.getContext());
-                    rawResourceDataSource.open(dataSpec);
-                    DataSource.Factory factory = new DataSource.Factory() {
-                        @Override
-                        public DataSource createDataSource() {
-                            return rawResourceDataSource;
-                        }
-                    };
-
-                    ExtractorMediaSource mediaSource = new ExtractorMediaSource(rawResourceDataSource.getUri(),
-                            factory, new DefaultExtractorsFactory(), null, null);
-                    exoPlayer.prepare(mediaSource);
-                    //exoPlayer.addListener(view.getContext().eventListener);
-                    exoPlayer.setPlayWhenReady(true);
-                } catch (RawResourceDataSource.RawResourceDataSourceException e) {
-                    e.printStackTrace();
+                //if(holder.isPlaying)
+                if(homepageFeed.getPlaying()) {
+                    homepageFeed.getExoPlayer().stop();
+                    homepageFeed.setPlaying(false);
+                    holder.imagePreview.setImageResource(R.drawable.play_button);
                 }
+                else {
+                    homepageFeed.setPlaying(true);
+                    holder.imagePreview.setImageResource(R.drawable.pause);
+                    DefaultBandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
+                    TrackSelection.Factory selectionFactory = new AdaptiveTrackSelection.Factory(bandwidthMeter);
+                    TrackSelector trackSelector = new DefaultTrackSelector(selectionFactory);
+                    homepageFeed.setExoPlayer(ExoPlayerFactory.newSimpleInstance(view.getContext(), trackSelector));
+
+                    try {
+                        DataSpec dataSpec = new DataSpec(RawResourceDataSource.buildRawResourceUri(homepageFeed.getMusicID()));
+                        rawResourceDataSource = new RawResourceDataSource(view.getContext());
+                        rawResourceDataSource.open(dataSpec);
+                        DataSource.Factory factory = new DataSource.Factory() {
+                            @Override
+                            public DataSource createDataSource() {
+                                return rawResourceDataSource;
+                            }
+                        };
+
+                        ExtractorMediaSource mediaSource = new ExtractorMediaSource(rawResourceDataSource.getUri(),
+                                factory, new DefaultExtractorsFactory(), null, null);
+                        homepageFeed.getExoPlayer().prepare(mediaSource);
+                        //exoPlayer.addListener(view.getContext().eventListener);
+                        homepageFeed.getExoPlayer().setPlayWhenReady(true);
+                    } catch (RawResourceDataSource.RawResourceDataSourceException e) {
+                        e.printStackTrace();
+                    }
+                }
+
             }
         });
     }

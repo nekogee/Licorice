@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.exoplayer2.SimpleExoPlayer;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class HomePageActivity extends Fragment {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent();
-            intent.setClass(getActivity(), WishEditActivity.class);
+            intent.setClass(getActivity(), PerformActivity.class);
             getActivity().startActivity(intent);
         }
     }
@@ -52,11 +54,11 @@ public class HomePageActivity extends Fragment {
 
     private void createWish() {
         for (int i = 0; i < 3; ++i) {
-            HomepageFeed homepageFeed1 = new HomepageFeed(R.drawable.user_img1, "nekogee",R.drawable.pic_b1, "我的歌", "Nekogee",R.raw.drum_break);
+            HomepageFeed homepageFeed1 = new HomepageFeed(R.drawable.user_img1, "crybaby",R.drawable.pic_b1, "我的freestyle", "Nekogee",R.raw.freestyle);
             homepageFeedList.add(homepageFeed1);
-            HomepageFeed homepageFeed2 = new HomepageFeed(R.drawable.user_img2, "miumiu",R.drawable.pic_b2, "my song", "Nekogee",R.raw.drum_break);
+            HomepageFeed homepageFeed2 = new HomepageFeed(R.drawable.user_img2, "nekogee",R.drawable.pic_b2, "my song", "Nekogee",R.raw.intro);
             homepageFeedList.add(homepageFeed2);
-            HomepageFeed homepageFeed3 = new HomepageFeed(R.drawable.user_img3, "Jane",R.drawable.pic_b3, "licorice", "Nekogee",R.raw.drum_break);
+            HomepageFeed homepageFeed3 = new HomepageFeed(R.drawable.user_img3, "miumiu",R.drawable.pic_b3, "licorice", "Nekogee",R.raw.tiny_piano);
             homepageFeedList.add(homepageFeed3);
         }
     }

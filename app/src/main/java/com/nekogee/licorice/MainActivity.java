@@ -1,5 +1,6 @@
 package com.nekogee.licorice;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -25,6 +26,8 @@ public class MainActivity extends  AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setNavigationBarColor(Color.BLACK);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //Intent intent = new Intent(MainActivity.this,LoginActivity.class);
         //startActivity(intent);
 
