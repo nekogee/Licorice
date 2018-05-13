@@ -67,7 +67,7 @@ public class MainActivity extends  AppCompatActivity{
                         break;
                     case 1:  {
                         Log.d("qqqq","111b");
-                        replaceFragment(new StoreActivity());
+                        replaceFragment(new CategoryActivity());
                         Log.d("qqqq","111b");
                     }
                         break;
