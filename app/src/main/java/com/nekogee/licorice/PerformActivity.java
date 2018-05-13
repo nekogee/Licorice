@@ -44,8 +44,15 @@ public class PerformActivity extends AppCompatActivity {
     private ImageView imageViewLoop;
     private ImageView imageViewEdit;
 
-    LottieAnimationView animationView;
     LottieAnimationView animationView1;
+    LottieAnimationView animationView2;
+    LottieAnimationView animationView3;
+    LottieAnimationView animationView4;
+    LottieAnimationView animationView5;
+    LottieAnimationView animationView6;
+    LottieAnimationView animationView7;
+    LottieAnimationView animationView8;
+    LottieAnimationView animationView9;
 
     RawResourceDataSource rawResourceDataSource;
 
@@ -115,11 +122,16 @@ public class PerformActivity extends AppCompatActivity {
         SimpleExoPlayer exoPlayer5;
         SimpleExoPlayer exoPlayer6;
         SimpleExoPlayer exoPlayer7;
+        SimpleExoPlayer exoPlayer8;
         SimpleExoPlayer exoPlayer11;
         SimpleExoPlayer  exoPlayer10;
         SimpleExoPlayer exoPlayer12;
+        SimpleExoPlayer exoPlayer13;
+        SimpleExoPlayer exoPlayer14;
         SimpleExoPlayer exoPlayer17;
         SimpleExoPlayer exoPlayer18;
+        SimpleExoPlayer exoPlayer19;
+        SimpleExoPlayer exoPlayer20;
         SimpleExoPlayer exoPlayer23;
         SimpleExoPlayer exoPlayer24;
 
@@ -131,16 +143,22 @@ public class PerformActivity extends AppCompatActivity {
         exoPlayer5 = newPlayer();
         exoPlayer6 = newPlayer();
         exoPlayer7 = newPlayer();
+        exoPlayer8 = newPlayer();
+
         exoPlayer10 = newPlayer();
         exoPlayer11 = newPlayer();
         exoPlayer12 = newPlayer();
+        exoPlayer13 = newPlayer();
+        exoPlayer14 = newPlayer();
         exoPlayer17 = newPlayer();
         exoPlayer18 = newPlayer();
+        exoPlayer19 = newPlayer();
+        exoPlayer20 = newPlayer();
         exoPlayer23 = newPlayer();
         exoPlayer24 = newPlayer();
 
         //Piano low
-        ButtonInfo buttonInfo6 = new ButtonInfo(R.id.ImageView_6,exoPlayer6,R.raw.piano_b3,R.raw.piano_high_j,SINGLE,SHORT);
+       /* ButtonInfo buttonInfo6 = new ButtonInfo(R.id.ImageView_6,exoPlayer6,R.raw.piano_b3,R.raw.piano_high_j,SINGLE,SHORT);
         ButtonInfo buttonInfo12 = new ButtonInfo(R.id.ImageView_12,exoPlayer12,R.raw.piano_d4,R.raw.piano_low,SINGLE,SHORT);
         ButtonInfo buttonInfo18 = new ButtonInfo(R.id.ImageView_18,exoPlayer18,R.raw.piano_g3,R.raw.estimate,SINGLE,SHORT);
         ButtonInfo buttonInfo24 = new ButtonInfo(R.id.ImageView_24,exoPlayer24,R.raw.piano_e4,R.raw.articulation,SINGLE,SHORT);
@@ -158,14 +176,14 @@ public class PerformActivity extends AppCompatActivity {
         initPlayButton(buttonInfo11);
 
         initPlayButton(buttonInfo17);
-        initPlayButton(buttonInfo23);
+        initPlayButton(buttonInfo23);*/
 
         //Piano high
-        ButtonInfo buttonInfo4 = new ButtonInfo(R.id.ImageView_4,exoPlayer4,R.raw.piano_b_high,R.raw.estimate,SINGLE,LONG);
+       /* ButtonInfo buttonInfo4 = new ButtonInfo(R.id.ImageView_4,exoPlayer4,R.raw.piano_b_high,R.raw.estimate,SINGLE,LONG  );
         ButtonInfo buttonInfo10 = new ButtonInfo(R.id.ImageView_10,exoPlayer10,R.raw.piano_high_j,R.raw.estimate,SINGLE,LONG);
 
         initPlayButton(buttonInfo4);
-        initPlayButton(buttonInfo10);
+        initPlayButton(buttonInfo10);*/
         /*
         ButtonInfo buttonInfo1 = new ButtonInfo(R.id.ImageView_1,exoPlayer1,R.raw.drum_break,R.raw.articulation,SINGLE);
         ButtonInfo buttonInfo2 = new ButtonInfo(R.id.ImageView_2,exoPlayer2,R.raw.shaker,R.raw.dyslexia,LOOP);
@@ -173,6 +191,36 @@ public class PerformActivity extends AppCompatActivity {
         ButtonInfo buttonInfo4 = new ButtonInfo(R.id.ImageView_4,exoPlayer4,R.raw.tappy_hats,R.raw.mnemonics,SINGLE);
         ButtonInfo buttonInfo7 = new ButtonInfo(R.id.ImageView_7,exoPlayer7,R.raw.soft_pads,R.raw.articulation,SINGLE);
 */
+        //tp
+        ButtonInfo buttonInfo8 = new ButtonInfo(R.id.ImageView_8,exoPlayer8,R.raw.tiny_piano,R.raw.tp_full,SINGLE,LONG,R.id.animationView_tp);
+        initPlayButton(buttonInfo8,(LottieAnimationView)findViewById(buttonInfo8.getAnimationViewID()));
+
+        //th
+        ButtonInfo buttonInfo2 = new ButtonInfo(R.id.ImageView_2,exoPlayer2,R.raw.tappy_hats,R.raw.th_full,SINGLE,LONG,R.id.animationView_th);
+        initPlayButton(buttonInfo2,(LottieAnimationView)findViewById(buttonInfo2.getAnimationViewID()));
+
+        //db
+        ButtonInfo buttonInfo1 = new ButtonInfo(R.id.ImageView_1,exoPlayer1,R.raw.drum_break_loop,R.raw.db_full,LOOP,LONG,R.id.animationView_db);
+        ButtonInfo buttonInfo7 = new ButtonInfo(R.id.ImageView_7,exoPlayer7,R.raw.drum_break_fast,R.raw.db2,SINGLE,LONG,R.id.animationView_db2);
+
+        initPlayButton(buttonInfo1, (LottieAnimationView)findViewById(buttonInfo1.getAnimationViewID()));
+        initPlayButton(buttonInfo7,(LottieAnimationView)findViewById(buttonInfo7.getAnimationViewID()));
+
+        //sp
+        ButtonInfo buttonInfo13 = new ButtonInfo(R.id.ImageView_13,exoPlayer13,R.raw.soft_pads,R.raw.sp_full,SINGLE,LONG,R.id.animationView_sp);
+        initPlayButton(buttonInfo13,(LottieAnimationView)findViewById(buttonInfo13.getAnimationViewID()));
+
+        //plucked
+        ButtonInfo buttonInfo19 = new ButtonInfo(R.id.ImageView_19,exoPlayer19,R.raw.plucked,R.raw.plucked_full,SINGLE,LONG,R.id.animationView_plucked);
+        initPlayButton(buttonInfo19,(LottieAnimationView)findViewById(buttonInfo19.getAnimationViewID()));
+
+        //piano high
+        ButtonInfo buttonInfo14 = new ButtonInfo(R.id.ImageView_14,exoPlayer14,R.raw.piano_high,R.raw.piano_high_full,SINGLE,LONG,R.id.animationView_piano_high);
+        initPlayButton(buttonInfo14,(LottieAnimationView)findViewById(buttonInfo14.getAnimationViewID()));
+
+        //piano low
+        ButtonInfo buttonInfo20 = new ButtonInfo(R.id.ImageView_20,exoPlayer20,R.raw.piano_low,R.raw.piano_low_full,SINGLE,LONG,R.id.animationView_piano_low);
+        initPlayButton(buttonInfo20,(LottieAnimationView)findViewById(buttonInfo20.getAnimationViewID()));
     }
 
     class ButtonInfo {
@@ -183,14 +231,16 @@ public class PerformActivity extends AppCompatActivity {
         private int animationID;
         private boolean isPlaying = false;
         private int kind;
+        private int animationViewID;
 
-        ButtonInfo(int resID,SimpleExoPlayer exoPlayer,int musicID,int animationID,int mode,int kind) {
+        ButtonInfo(int resID,SimpleExoPlayer exoPlayer,int musicID,int animationID,int mode,int kind,int animationViewID) {
             this.resID = resID;
             this.exoPlayer = exoPlayer;
             this.musicID = musicID;
             this.animationID = animationID;
             this.mode = mode;
             this.kind = kind;
+            this.animationViewID = animationViewID;
             //this.isPlaying = isPlaying;
         }
 
@@ -232,6 +282,7 @@ public class PerformActivity extends AppCompatActivity {
         public int getAnimationID() {
             return animationID;
         }
+        public int getAnimationViewID() {return animationViewID;}
         public int getMode() {
             return mode;
         }
@@ -245,31 +296,38 @@ public class PerformActivity extends AppCompatActivity {
         }
 
     }
-    private void initPlayButton(final ButtonInfo buttonInfo) {
+    private void initPlayButton(final ButtonInfo buttonInfo,final LottieAnimationView animationView) {
         imageView = findViewById(buttonInfo.getResID());
         //imageView.requestFocus();
-        animationView = findViewById(R.id.animationView);
-        animationView1 = findViewById(R.id.animationView1);
+
+        //animationView = findViewById(buttonInfo.getAnimationViewID());
         switch (buttonInfo.getMode()){
             case SINGLE : {
                 imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         animationView.setAnimation(buttonInfo.getAnimationID());
-                        animationView.playAnimation();
+
                         if(buttonInfo.kind==SHORT||buttonInfo.getExoPlayer().getPlaybackState()==Player.STATE_ENDED) {
                             //exoPlayer.setPlayWhenReady(true);
                             Log.d("neww", "onClick: ended");
+                            animationView.setVisibility(View.VISIBLE);
+                            animationView.playAnimation();
                             singlePlay(buttonInfo.getExoPlayer(), buttonInfo.getMusicID());
                         }
                         else if(buttonInfo.isPlaying()) {
                             Log.d("neww", "onClick: "+buttonInfo.getExoPlayer().getPlaybackState());
+                            animationView.setVisibility(View.INVISIBLE);
                             buttonInfo.getExoPlayer().setPlayWhenReady(false);
                             buttonInfo.setPlaying(false);
                         }
                         else {
                             singlePlay(buttonInfo.getExoPlayer(), buttonInfo.getMusicID());
-                           buttonInfo.setPlaying(true);
+                            buttonInfo.setPlaying(true);
+                            animationView.setVisibility(View.VISIBLE);
+                            animationView.loop(false);
+                            animationView.playAnimation();
+
                         }
                     }
                 });
@@ -278,13 +336,19 @@ public class PerformActivity extends AppCompatActivity {
                 imageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        animationView1.setAnimation(buttonInfo.getAnimationID());
-                        animationView1.playAnimation();
+                        animationView.setAnimation(buttonInfo.getAnimationID());
+                        //animationView.setRepeatCount(4);
+                        //animationView.setRepeatMode(LOOP);
+
                         if(buttonInfo.isPlaying) {
                             buttonInfo.getExoPlayer().setPlayWhenReady(false);
                             buttonInfo.setPlaying(false);
+                            animationView.setVisibility(View.INVISIBLE);
                         }
                         else {
+                            animationView.setVisibility(View.VISIBLE);
+                            animationView.loop(true);
+                            animationView.playAnimation();
                             loopPlay(buttonInfo.getExoPlayer(), buttonInfo.getMusicID());
                             buttonInfo.setPlaying(true);
                         }
