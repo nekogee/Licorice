@@ -16,5 +16,6 @@
         </intent-filter>
     </activity>
         <activity android:name=".PerformActivity"/>
+        <activity android:name=".StoreREALActivity"/>
     </application>
 </manifest>

@@ -1,51 +1,42 @@
 package com.nekogee.licorice;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by hui jie on 2018/4/6.
+ * Created by hui jie on 2018/5/16.
  */
 
-public class StoreActivity extends Fragment {
+public class StoreREALActivity extends AppCompatActivity {
     private List<StoreItem> storeItemList = new ArrayList<>();
     private RecyclerView recyclerView;
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_store ,container,false);
-        recyclerView = view.findViewById(R.id.store_recyclerView);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_store_real);
+
+        recyclerView = findViewById(R.id.store_recyclerView);
         DividerLine dividerLine = new DividerLine(DividerLine.VERTICAL);
         dividerLine.setSize(1);
         dividerLine.setColor(0xFFDDDDDD);
         recyclerView.addItemDecoration(dividerLine);
         recyclerView.addItemDecoration(dividerLine);
-        return view;
-    }
-
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         createStore();
         Log.d("hhh", "onActivityCreated: ");
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         StoreItemAdapter adapter = new StoreItemAdapter(storeItemList);
         Log.d("hhh", "onActivityCreated: ");
         recyclerView.setAdapter(adapter);
     }
+
     private void createStore() {
         for (int i = 0; i < 3; ++i) {
             StoreItem storeItem1 = new StoreItem(R.drawable.pic_b2,"大自然的声音","1");

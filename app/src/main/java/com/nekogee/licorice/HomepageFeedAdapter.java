@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.SimpleExoPlayer;
@@ -37,6 +38,7 @@ public class HomepageFeedAdapter extends RecyclerView.Adapter<HomepageFeedAdapte
         TextView songTitle ;
         ImageView coverImage ;
         TextView songAuthor;
+        ImageView add;
         boolean isPlaying = false;
 
         public ViewHolder(View view){
@@ -47,6 +49,7 @@ public class HomepageFeedAdapter extends RecyclerView.Adapter<HomepageFeedAdapte
             coverImage = (ImageView)view.findViewById(R.id.homepage_image_cover) ;
             songTitle = (TextView)view.findViewById(R.id.homepage_text_songTitle) ;
             songAuthor = (TextView)view.findViewById(R.id.homepage_text_songAuthor) ;
+            add = view.findViewById(R.id.homepage_add);
         }
     }
 
@@ -69,6 +72,7 @@ public class HomepageFeedAdapter extends RecyclerView.Adapter<HomepageFeedAdapte
         holder.songTitle.setText(homepageFeed.getSongTitle());
         holder.coverImage.setImageResource(homepageFeed.getCover());
         holder.songAuthor.setText(homepageFeed.getSongAuthor());
+
 
         holder.imagePreview.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -45,9 +45,9 @@ public class MainActivity extends  AppCompatActivity{
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         // bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
         bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_favorite_border_black_36dp,"首页").setActiveColorResource(R.color.colorMain))
-                .addItem(new BottomNavigationItem(R.drawable.ic_question_answer_black_36dp,"分区").setActiveColorResource(R.color.colorMain))
-                .addItem(new BottomNavigationItem(R.drawable.ic_perm_identity_black_36dp, "动态").setActiveColorResource(R.color.colorMain))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_home_black_36dp,"首页").setActiveColorResource(R.color.colorMain))
+                .addItem(new BottomNavigationItem(R.drawable.ic_view_module_black_24dp,"分区").setActiveColorResource(R.color.colorMain))
+                .addItem(new BottomNavigationItem(R.drawable.ic_view_day_black_24dp, "动态").setActiveColorResource(R.color.colorMain))
                 .addItem(new BottomNavigationItem(R.drawable.ic_perm_identity_black_36dp, "我的").setActiveColorResource(R.color.colorMain))
                 .setFirstSelectedPosition(0)
                 .initialise();

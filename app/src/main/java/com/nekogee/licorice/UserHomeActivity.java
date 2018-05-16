@@ -28,12 +28,12 @@ public class UserHomeActivity extends android.support.v4.app.Fragment {
             public void onClick(View arg0) {
 
                 Log.d("pppp","b4add");
-                //Intent intent = new Intent(getActivity().getApplicationContext(),StoreActivity.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(),StoreREALActivity.class);
                 Log.d("pppp","b4add");
                 //tartActivity(intent);
                 //Intent intent = new Intent(UserHomeActivity.this,UserHomePageActivity.class);
-                //startActivity(intent);
-                replaceFragment(new StoreActivity());
+                startActivity(intent);
+                //replaceFragment(new StoreActivity());
             }
         });
 
